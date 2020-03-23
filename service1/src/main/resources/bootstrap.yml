@@ -1,0 +1,25 @@
+server:
+  port: 56010
+
+spring:
+  application:
+    name: service
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850
+        file-extension: yaml
+        namespace: c8876dff-95a3-4ac5-92fc-ccb391e6d40e
+        group: TEST_GROUP
+#        shared-dataids: ext-config-common01.properties, ext-config-common02.properties, ext-config-common03.properties
+#        refreshable-dataids: ext-config-common01.properties, ext-config-common02.properties, ext-config-common03.properties
+        enabled: true
+        ext-config[0]:
+          data-id: ext-config-common01.properties
+        ext-config[1]:
+          data-id: ext-config-common02.properties
+          group: GLOBALE_GROUP
+        ext-config[2]:
+          data-id: ext-config-common03.properties
+          group: REFRESH_GROUP
+          refresh: true
