@@ -19,7 +19,6 @@
         <java.version>1.8</java.version>
         <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
@@ -56,7 +55,6 @@
             </exclusions>
         </dependency>
     </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>

@@ -1,0 +1,10 @@
+server:
+  port: 56010
+spring:
+  application:
+    name: service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850
+        namespace: c8876dff-95a3-4ac5-92fc-ccb391e6d40e
