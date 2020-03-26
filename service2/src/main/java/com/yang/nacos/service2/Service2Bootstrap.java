@@ -1,9 +1,9 @@
 package com.yang.nacos.service2;
 
-import com.alibaba.nacos.spring.context.annotation.discovery.EnableNacosDiscovery;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +20,8 @@ import javax.annotation.Resource;
  */
 @SpringBootApplication
 @RestController
-@EnableNacosDiscovery
 @EnableFeignClients
+@EnableDiscoveryClient
 public class Service2Bootstrap {
 	public static void main(String[] args) {
 		SpringApplication.run(Service2Bootstrap.class, args);
